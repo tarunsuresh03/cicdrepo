@@ -7,3 +7,4 @@
 <h1> tomcat successfull </h1>
 <h1> successfully completed the automation trigger </h1>
 <h1> successfully complete the webhook </h1>
+<h1> pull request trigger </h1>
