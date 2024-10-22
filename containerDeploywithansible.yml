@@ -4,13 +4,13 @@
       
     - name: Log into jfrog
       docker_login:
-        registry: shstechacademy.jfrog.io
-        username: devops6789@gmail.com
-        password: Siddu@9880
+        registry: trial7vm1qx.jfrog.io
+        username: taruntaru18@gmail.com
+        password: Geetha@27
         
     - name: pull an image
       docker_image:
-        name: "shstechacademy.jfrog.io/sampledockeruplaod/newimage:31"
+        name: "trial7vm1qx.jfrog.io/test/frontend:{{ BUILD_NUMBER }}"
         source: pull
 
     - name: remove container
@@ -21,7 +21,7 @@
     - name: create a application container
       docker_container:
         name: devopsAppDeploy
-        image: "shstechacademy.jfrog.io/sampledockeruplaod/newimage:31"
+        image: "trial7vm1qx.jfrog.io/test/frontend:{{ BUILD_NUMBER }}"
         state: started
         ports:
           - "8111:8080"
